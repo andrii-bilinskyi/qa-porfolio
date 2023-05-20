@@ -1,0 +1,158 @@
+{
+	"info": {
+		"_postman_id": "0c46034a-1d2a-49df-aae3-ae333b501f31",
+		"name": "Trello",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23776532",
+		"_collection_link": "https://www.postman.com/belka1998/workspace/test/collection/23776532-0c46034a-1d2a-49df-aae3-ae333b501f31?action=share&creator=23776532&source=collection_link"
+	},
+	"item": [
+		{
+			"name": "Get board",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{trello_url}}/1/members/me/boards?key={{trello_key}}&token={{trello_token}}",
+					"host": [
+						"{{trello_url}}"
+					],
+					"path": [
+						"1",
+						"members",
+						"me",
+						"boards"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "{{trello_key}}"
+						},
+						{
+							"key": "token",
+							"value": "{{trello_token}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create board",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"OlhaTest\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{trello_url}}/1/boards/?key={{trello_key}}&token={{trello_token}}",
+					"host": [
+						"{{trello_url}}"
+					],
+					"path": [
+						"1",
+						"boards",
+						""
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "{{trello_key}}"
+						},
+						{
+							"key": "token",
+							"value": "{{trello_token}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete board",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{trello_url}}/1/boards/6276907966cb4c18c1d919dc?key={{trello_key}}&token={{trello_token}}",
+					"host": [
+						"{{trello_url}}"
+					],
+					"path": [
+						"1",
+						"boards",
+						"6276907966cb4c18c1d919dc"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "{{trello_key}}"
+						},
+						{
+							"key": "token",
+							"value": "{{trello_token}}"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "trello_url",
+			"value": "https://api.trello.com"
+		},
+		{
+			"key": "trello_key",
+			"value": "1ae0703d2777745202a2628ad561ac10"
+		},
+		{
+			"key": "trello_token",
+			"value": "06aa0a75c8c6c1346ff650835cf5c37d5f28ba4560220ff1f269596b7e7c7320"
+		}
+	]
+}
