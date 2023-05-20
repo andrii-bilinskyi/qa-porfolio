@@ -1,0 +1,66 @@
+{
+  "TestCase_id": "1",
+  "Title": "Verify retake the flow button on the mobile",
+  "Pre-condition": "The page https://example_url/ is open",
+  "Steps": [
+    {
+      "0": "Click on the CTA button and pass the flow",
+      "ExpectedResults": "The recommendation screen with TryOn and size is present"
+    },
+    {
+      "1": "Click on the Product details button",
+      "ExpectedResults": "The product design page with the CTA button is open"
+    },
+    {
+      "2": "Observe the retake the flow button",
+      "ExpectedResults": "The button is present and matches the design"
+    },
+    {
+      "3": "Click on the retake the flow button",
+      "ExpectedResults": "The new flow is started"
+    }
+  ]
+}
+
+
+
+{
+  "TestCase_id": "2",
+  "Title": "add to cart button on the mobile",
+  "Pre-condition": "The website https://example_url/ is open",
+  "Steps": [
+    {
+      "0": "Choose some item from the store",
+      "ExpectedResults": "The item is open and the CTA button is present"
+    },
+    {
+      "1": "Click on the СTA button and pass the valid flow",
+      "ExpectedResults": "The recommendation screen with TryOn, sizes and add to cart button is present"
+    },
+    {
+      "2": "Click on the add to cart button",
+      "ExpectedResults": "There is redirect to the cart. There are correct price and bestfit"
+    }
+  ]
+}
+
+
+
+  "TestCase_id": "3",
+  "Title": "Verify that price and currency on the widget",
+  "Pre-condition": "The page https://example_url/ is open",
+  "Steps": [
+    {
+      "0": "Choose some item from the store",
+      "ExpectedResults": "The item is open and the CTA button is present"
+    },
+    {
+      "1": "Click on the СTA button and pass the valid flow",
+      "ExpectedResults": "The recommendation screen with TryOn, sizes and add to cart button is present"
+    },
+    {
+      "2": "Observe the price and currency on the recommendation screen",
+      "ExpectedResults": "The price and currency is match with product design page"
+    }
+  ]
+}
