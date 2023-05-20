@@ -1,0 +1,43 @@
+[
+  {
+    "Bug_id": "1",
+    "Priority": "High",
+    "Summary": "Retake the flow button is non-clickable",
+    "Pre-condition": "The page https://example_url/ is open",
+    "Steps to reproduce": {
+      "1": "Click on the CTA button and pass the flow",
+      "2": "Click on the Product details button",
+      "3": "Click on the retake the flow button",
+      "4": "Observe the results"
+    },
+    "Expected result": "The new flow is started",
+    "Actual result": "The button is non-clickable"
+  },
+  {
+    "Bug_id": "2",
+    "Priority": "High",
+    "Summary": "The add to cart button is redirected to the home page",
+    "Pre-condition": "The website https://example_url/ is open",
+    "Steps to reproduce": {
+      "1": "Choose some item from the store",
+      "2": "Click on the CTA button and pass the valid flow",
+      "3": "Click on the add to cart button",
+      "4": "Observe the results"
+    },
+    "Expected result": "There is a redirect to the cart",
+    "Actual result": "The home page is open"
+  },
+  {
+    "Bug_id": "3",
+    "Priority": "High",
+    "Summary": "The price does not match with product page",
+    "Pre-condition": "The website https://example_url/ is open",
+    "Steps to reproduce": {
+      "1": "Choose some item from the store",
+      "2": "Click on the СTA button and pass the valid flow",
+      "3": "Observe the price and currency on the recommendation screen"
+    },
+    "Expected result": "The price and currency match with product design page",
+    "Actual result": "The price on the recommendation screen does not match with product page price"
+  }
+]
